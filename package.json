@@ -1,0 +1,26 @@
+{
+  "name": "byiiet",
+  "version": "1.0.0",
+  "description": "byiiet is a porfolio project build with Vue.js & Bootstrap 5, WordPress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iietmoon/byiiet.git"
+  },
+  "keywords": [
+    "vue.js",
+    "vue",
+    "bootstrap",
+    "5",
+    "wordpress"
+  ],
+  "author": "Othmane N.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iietmoon/byiiet/issues"
+  },
+  "homepage": "https://github.com/iietmoon/byiiet#readme"
+}
