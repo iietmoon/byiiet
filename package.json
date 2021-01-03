@@ -1,26 +1,33 @@
 {
-  "name": "byiiet",
-  "version": "1.0.0",
-  "description": "byiiet is a porfolio project build with Vue.js & Bootstrap 5, WordPress",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iietmoon/byiiet.git"
-  },
-  "keywords": [
-    "vue.js",
-    "vue",
-    "bootstrap",
-    "5",
-    "wordpress"
-  ],
-  "author": "Othmane N.",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iietmoon/byiiet/issues"
-  },
-  "homepage": "https://github.com/iietmoon/byiiet#readme"
+    "name": "byiiet",
+    "version": "1.0.0",
+    "description": "byiiet is a porfolio project build with Vue.js & Node.js, Bootstrap 5, WordPress Restful API",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iietmoon/byiiet.git"
+    },
+    "keywords": [
+        "vue.js",
+        "Node.js",
+        "vue",
+        "bootstrap",
+        "5",
+        "wordpress"
+    ],
+    "author": "Othmane N.",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/iietmoon/byiiet/issues"
+    },
+    "homepage": "https://github.com/iietmoon/byiiet#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1"
+    }
 }
