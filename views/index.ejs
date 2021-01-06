@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <!--Stylesheet-->
     <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!--Javascript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
@@ -15,39 +16,52 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
-<body>
-    <div id="navbar" class="m-4">
-        <div class="d-flex">
-            <div class="col-2 blue">
-                <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
-            </div>
-            <div class="col red">
-                <div>
-                    <ul>
-                        <a v-bind:href="navLinks.l1">
-                            <li v-text="nav.n1"></li>
-                        </a>
-                        <a v-bind:href="navLinks.l2">
-                            <li v-text="nav.n2"></li>
-                        </a>
-                        <a v-bind:href="navLinks.l3">
-                            <li v-text="nav.n3"></li>
-                        </a>
-                        <a v-bind:href="navLinks.l4">
-                            <li v-text="nav.n4"></li>
-                        </a>
-                    </ul>
+<body class="lm-body">
+    <section id="main-sec">
+        <div id="navbar">
+            <div class="d-flex">
+                <div class="col-2">
+                    <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
                 </div>
-            </div>
-            <div class="col-2 green align-items-end">
-                <div class="row">
-                    <div class="col">1</div>
-                    <div class="col">1</div>
-                    <div class="col">1</div>
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div>
+                        <ul id="nav">
+                            <a v-bind:href="navLinks.l1">
+                                <li v-text="nav.n1" v-bind:class="navClass.c1"></li>
+                            </a>
+                            <a v-bind:href="navLinks.l2">
+                                <li v-text="nav.n2" v-bind:class="navClass.c2"></li>
+                            </a>
+                            <a v-bind:href="navLinks.l3">
+                                <li v-text="nav.n3" v-bind:class="navClass.c3"></li>
+                            </a>
+                            <a v-bind:href="navLinks.l4">
+                                <li v-text="nav.n4" v-bind:class="navClass.c4"></li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 d-flex justify-content-center align-items-center">
+                    <div class="row">
+                        <ul>
+                            <li>
+                                <a v-bind:href="searchIcon.href" v-html="searchIcon.path" v-bind:class="searchIcon.c"></a>
+                            </li>
+                            <li>
+                                <a v-bind:href="contactBtn.href" v-text="contactBtn.text" v-bind:class="contactBtn.c"></a>
+                            </li>
+                            <li>
+                                <span class="mode-btn">
+                                  <img v-bind:src="modeBtn.dark.path" v-bind:alt="modeBtn.dark.alt" v-bind:class="modeBtn.dark.class">
+                                  <img v-bind:src="modeBtn.light.path" v-bind:alt="modeBtn.light.alt" v-bind:class="modeBtn.light.class">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!--Vue.js-->
     <script src="js/core.vue.js"></script>
 </body>
