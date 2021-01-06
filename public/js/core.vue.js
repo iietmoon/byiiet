@@ -39,15 +39,51 @@ var navbar = new Vue({
         },
         modeBtn: {
             light: {
-                path: 'https://icons.getbootstrap.com/icons/brightness-high-fill.svg',
+                path: '<i class="fa fa-sun-o" aria-hidden="true"></i>',
                 alt: 'light mode icon',
-                class: 'light'
+                class: 'light',
+                href: '#'
             },
             dark: {
-                path: 'https://icons.getbootstrap.com/icons/moon.svg',
+                path: '<i class="fa fa-moon-o" aria-hidden="true"></i>',
                 alt: 'Dark mode icon',
-                class: 'dark'
+                class: 'dark',
+                href: '#',
             }
         }
+    },
+    methods:{
+        dark: function () {
+            var dmode = document.getElementById('app');
+            dmode.classList.remove('lm-body');
+            dmode.classList.add('dm-body');
+        }
     }
+});
+
+
+var content =new Vue({
+    el: '#content',
+    data: {
+        headline:{
+            text: '<h1>Curiosity about life in all of its aspects,<br>I think, is still the secret of great creative people.</h1>',
+            c: 'headline'
+        },
+        img:{
+            path: 'img/main-img.jpg',
+            alt: 'Othmane N. picture',
+            size: 500,
+        },
+        btn: {
+            text: '<p>Explore</p>',
+            bIcon: {
+                path: '<i class="fa fa-minus" aria-hidden="true"></i>'
+            },
+            aIcon: {
+                path: '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
+            },
+            href: '#',
+            c: 'exp-btn'
+        }
+    },
 })

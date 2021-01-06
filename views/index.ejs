@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
-<body class="lm-body">
+<body id="app" class="lm-body">
     <section id="main-sec">
         <div id="navbar">
             <div class="d-flex">
@@ -52,14 +52,25 @@
                             </li>
                             <li>
                                 <span class="mode-btn">
-                                  <img v-bind:src="modeBtn.dark.path" v-bind:alt="modeBtn.dark.alt" v-bind:class="modeBtn.dark.class">
-                                  <img v-bind:src="modeBtn.light.path" v-bind:alt="modeBtn.light.alt" v-bind:class="modeBtn.light.class">
+                                  <a v-html="modeBtn.dark.path" v-bind:href="modeBtn.dark.href" v-bind:alt="modeBtn.dark.alt" v-bind:class="modeBtn.dark.class" v-on:click="dark();"></a>
+                                  <a v-html="modeBtn.light.path" v-bind:href="modeBtn.light.href" v-bind:alt="modeBtn.light.alt" v-bind:class="modeBtn.light.class"></a>
                                 </span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="content" class="d-flex justify-content-center">
+          <div class="text-center">
+            <div v-html="headline.text" v-bind:class='headline.c'></div>
+            <img v-bind:src="img.path" v-bind:width="img.size" v-bind:alt="img.alt">
+            <a v-bind:href="btn.href" v-bind:class="btn.c">
+                 <div v-html="btn.bIcon.path"></div>
+                 <div v-html="btn.text"></div>
+                 <div v-html="btn.aIcon.path"></div>
+            </a>
+          </div>
         </div>
     </section>
     <!--Vue.js-->
