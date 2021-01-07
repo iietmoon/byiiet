@@ -76,6 +76,7 @@ body {
     font-family: 'Poppins';
     font-weight: normal;
     color: white;
+    transition: 0.4s;
 }
 
 .lm-body #navbar ul#nav a li:after {
@@ -88,6 +89,7 @@ body {
     background-color: rgba(255, 255, 255, 0);
     width: 60px;
     border-radius: 5px;
+    transition: 0.4s;
 }
 
 .lm-body #navbar ul#nav a:hover li:after {
@@ -144,6 +146,7 @@ body {
     border: 2px solid white;
     padding: 8px 45px;
     box-shadow: inset 0 0 0 0 white;
+    transition: 0.7s;
 }
 
 .lm-body #navbar ul li a.c-btn:hover {
@@ -191,16 +194,36 @@ body {
     text-decoration: none;
     color: white;
 }
-.lm-body #content a.exp-btn{
-    margin-top: 15px;
-}
-.lm-body #content a.exp-btn i,
-.lm-body #content a.exp-btn p
-{
+
+.lm-body #content a.exp-btn button{
     transform: rotate(90deg);
+    color: white;
+    margin-top: 45px;
+    font-weight: 600;
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+    transition: 0.2s;
 }
-.lm-body #content a.exp-btn p{
-    margin-top>: 55px;
+.lm-body #content a.exp-btn button:focus{
+    outline: none;
+}
+.lm-body #content a.exp-btn button img{
+    padding: 15px;
+    transition: 0.2s;
+}
+.lm-body #content a.exp-btn button img{
+    margin-top: -2px;
+    padding: 5px;
+    width: 25px;
+}
+.lm-body #content a.exp-btn  img.a-icon{
+    padding-top:35px;
+    transition: 0.2s;
+    width: 15px;
+}
+.lm-body #content a.exp-btn:hover img.a-icon{
+    padding-top:43px;
+    transition-timing-function: ease-in;
 }
 /*----------------------------------------
     2) Dark Mode Css

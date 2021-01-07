@@ -18,9 +18,9 @@
 
 <body id="app" class="lm-body">
     <section id="main-sec">
-        <div id="navbar">
+        <div id="navbar" class="p-4">
             <div class="d-flex">
-                <div class="col-2">
+                <div class="col-2 ps-5">
                     <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
@@ -65,11 +65,8 @@
           <div class="text-center">
             <div v-html="headline.text" v-bind:class='headline.c'></div>
             <img v-bind:src="img.path" v-bind:width="img.size" v-bind:alt="img.alt">
-            <a v-bind:href="btn.href" v-bind:class="btn.c">
-                 <div v-html="btn.bIcon.path"></div>
-                 <div v-html="btn.text"></div>
-                 <div v-html="btn.aIcon.path"></div>
-            </a>
+            <br>
+            <a v-bind:href="btn.href" v-bind:class="btn.c" v-html="btn.html"></a>
           </div>
         </div>
     </section>

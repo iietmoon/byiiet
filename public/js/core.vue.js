@@ -4,10 +4,10 @@ var navbar = new Vue({
     data: {
         act: 'active',
         logo: {
-            path: 'img/logo/250.png',
+            path: 'img/logo/full.png',
             alt: 'Logo',
             link: '/',
-            size: 100,
+            size: 60,
         },
         nav: {
             n1: 'About me',
@@ -75,13 +75,7 @@ var content =new Vue({
             size: 500,
         },
         btn: {
-            text: '<p>Explore</p>',
-            bIcon: {
-                path: '<i class="fa fa-minus" aria-hidden="true"></i>'
-            },
-            aIcon: {
-                path: '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
-            },
+            html: '<button><img src="icons/dash.svg">Explore</button><br><img src="icons/arrow-down.svg" class="a-icon">',
             href: '#',
             c: 'exp-btn'
         }
