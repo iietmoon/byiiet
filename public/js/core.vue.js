@@ -52,8 +52,8 @@ var navbar = new Vue({
             }
         }
     },
-    methods:{
-        dark: function () {
+    methods: {
+        dark: function() {
             var dmode = document.getElementById('app');
             dmode.classList.remove('lm-body');
             dmode.classList.add('dm-body');
@@ -61,15 +61,39 @@ var navbar = new Vue({
     }
 });
 
+var mobnav = new Vue({
+    el: '#navbar-mobile',
+    data: {
+        logo: {
+            path: 'img/logo/full.png',
+            alt: 'Logo',
+            href: '/',
+            size: 65
+        },
+        menu: {
+            icon: ''
+        },
+    },
+    methods: {
+        menushow: function() {
+            var show = document.getElementById('nc-mob');
+            show.classList.remove('hide')
+        },
+        menuhide: function() {
+            var hide = document.getElementById('nc-mob');
+            hide.classList.add('hide')
+        }
+    }
+});
 
-var content =new Vue({
+var content = new Vue({
     el: '#content',
     data: {
-        headline:{
+        headline: {
             text: '<h1>Curiosity about life in all of its aspects,<br>I think, is still the secret of great creative people.</h1>',
             c: 'headline'
         },
-        img:{
+        img: {
             path: 'img/main-img.jpg',
             alt: 'Othmane N. picture',
             size: 500,

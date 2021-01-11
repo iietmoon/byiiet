@@ -17,6 +17,10 @@ body {
     padding: 0;
 }
 
+.hide {
+    display: none;
+}
+
 
 /* colors */
 
@@ -42,6 +46,36 @@ body {
 }
 
 
+/* Animations */
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closefirst {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes closesecond {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+
 /*----------------------------------------
     1) Light Mode Css
 ----------------------------------------*/
@@ -57,13 +91,17 @@ body {
 
 /* Navbar */
 
+.lm-body #navbar {
+    padding: 25px 15px;
+}
+
 .lm-body #navbar ul {
-    margin-top: 15px;
+    /*margin-top: 15px;*/
 }
 
 .lm-body #navbar ul li {
     display: inline;
-    padding: 15px 20px;
+    padding: 15px;
 }
 
 .lm-body #navbar ul a {
@@ -83,7 +121,7 @@ body {
     content: "";
     position: absolute;
     bottom: -10px;
-    left: 20px;
+    left: 25px;
     right: 0;
     height: 2px;
     background-color: rgba(255, 255, 255, 0);
@@ -154,31 +192,85 @@ body {
     box-shadow: inset 175px 0 0 0 white;
     color: var(--light);
 }
-.lm-body #navbar ul li .mode-btn{
+
+.lm-body #navbar ul li .mode-btn {
     border: 1px solid white;
     border-radius: 20px;
     padding: 2px 4px;
 }
-.lm-body #navbar ul li .mode-btn i{
+
+.lm-body #navbar ul li .mode-btn i {
     color: var(--light);
     background-color: white;
     padding: 3px;
     border-radius: 100%;
     margin: -2px;
 }
-.lm-body #navbar ul li .mode-btn .dark i{
+
+.lm-body #navbar ul li .mode-btn .dark i {
     padding: 3px 4px;
 }
-.lm-body #navbar ul li .mode-btn .light i{
+
+.lm-body #navbar ul li .mode-btn .light i {
     opacity: 0;
 }
-.lm-body #content{
+
+.lm-body #navbar-mobile .m-ico-c .m-ico-1,
+.lm-body #navbar-mobile .m-ico-c .m-ico-2,
+.lm-body #navbar-mobile .m-ico-c .m-ico-3 {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.lm-body #navbar-mobile .m-ico-c .m-ico-2 {
+    width: 14px;
+}
+
+.lm-body #navbar-mobile .m-ico-c:hover .m-ico-2 {
+    width: 25px;
+}
+
+.lm-body #navbar-mobile .m-ico-c:hover .m-ico-1,
+.lm-body #navbar-mobile .m-ico-c:hover .m-ico-3 {
+    width: 16px
+}
+
+.lm-body #navbar-mobile .m-ico-c .m-ico-close-1,
+.lm-body #navbar-mobile .m-ico-c .m-ico-close-2 {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.lm-body #navbar-mobile .m-ico-c .m-ico-close-1 {
+    animation-name: closesecond;
+    animation-duration: 1.2s;
+    transform: rotate(45deg);
+}
+
+.lm-body #navbar-mobile .m-ico-c .m-ico-close-2 {
+    margin-top: -9px;
+    animation-name: closefirst;
+    animation-duration: 1.2s;
+    transform: rotate(-45deg);
+}
+
+.lm-body #content {
     margin-top: 50px;
 }
-.lm-body .headline{
+
+.lm-body .headline {
     position: relative;
 }
-.lm-body #content .headline h1{
+
+.lm-body #content .headline h1 {
     margin-bottom: -25px;
     z-index: 99;
     color: white;
@@ -187,15 +279,17 @@ body {
     font-weight: normal;
     text-shadow: 0px 0px 15px #2e2e2e61;
 }
-.lm-body #content img{
+
+.lm-body #content img {
     z-index: -99;
 }
-.lm-body #content a.exp-btn{
+
+.lm-body #content a.exp-btn {
     text-decoration: none;
     color: white;
 }
 
-.lm-body #content a.exp-btn button{
+.lm-body #content a.exp-btn button {
     transform: rotate(90deg);
     color: white;
     margin-top: 45px;
@@ -204,31 +298,73 @@ body {
     border: none;
     transition: 0.2s;
 }
-.lm-body #content a.exp-btn button:focus{
+
+.lm-body #content a.exp-btn button:focus {
     outline: none;
 }
-.lm-body #content a.exp-btn button img{
+
+.lm-body #content a.exp-btn button img {
     padding: 15px;
     transition: 0.2s;
 }
-.lm-body #content a.exp-btn button img{
+
+.lm-body #content a.exp-btn button img {
     margin-top: -2px;
     padding: 5px;
     width: 25px;
 }
-.lm-body #content a.exp-btn  img.a-icon{
-    padding-top:35px;
+
+.lm-body #content a.exp-btn img.a-icon {
+    padding-top: 35px;
     transition: 0.2s;
     width: 15px;
 }
-.lm-body #content a.exp-btn:hover img.a-icon{
-    padding-top:43px;
+
+.lm-body #content a.exp-btn:hover img.a-icon {
+    padding-top: 43px;
     transition-timing-function: ease-in;
 }
+
+.lm-body #navbar-mobile .navbar-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--dark);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    overflow: hidden;
+    animation-name: opacity;
+    animation-duration: 0.7s;
+}
+
+
+/*resposive design*/
+
+.lm-body #main-sec #navbar {
+    display: inherit;
+}
+
+.lm-body #navbar-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .lm-body #main-sec #navbar {
+        display: none;
+    }
+    .lm-body #navbar-mobile {
+        display: inherit;
+    }
+}
+
+
 /*----------------------------------------
     2) Dark Mode Css
 ----------------------------------------*/
-.dm-body{
+
+.dm-body {
     background-color: var(--dark);
     transition: 0.7s;
 }
