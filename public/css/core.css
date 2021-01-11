@@ -11,14 +11,28 @@ This file contain the core styelsheet
 
 /* General */
 
+* {
+    cursor: url('../icons/circle-fill.svg'), auto;
+}
+
 body {
     font-family: 'Poppins';
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .hide {
     display: none;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.7;
 }
 
 
@@ -282,6 +296,20 @@ body {
 
 .lm-body #content img {
     z-index: -99;
+}
+
+.lm-body #content .img-con .cursor-img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 600;
+    padding: 25px 10px;
+    color: var(--dark);
+    opacity: 0;
 }
 
 .lm-body #content a.exp-btn {

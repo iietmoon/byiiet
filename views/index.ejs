@@ -97,7 +97,12 @@
         <div id="content" class="d-flex justify-content-center">
             <div class="text-center">
                 <div v-html="headline.text" v-bind:class='headline.c'></div>
-                <img v-bind:src="img.path" v-bind:width="img.size" v-bind:alt="img.alt">
+                <div class="img-con">
+                    <div class="cursor-img">
+                        Hello!
+                    </div>
+                    <img v-bind:src="img.path" v-bind:width="img.size" v-bind:alt="img.alt">
+                </div>
                 <br>
                 <a v-bind:href="btn.href" v-bind:class="btn.c" v-html="btn.html"></a>
             </div>
@@ -106,6 +111,12 @@
     </section>
     <!--Vue.js-->
     <script src="js/core.vue.js"></script>
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY - 15) + "px; left:" + (e.pageX - 15) + "px;");
+        });
+    </script>
 </body>
 
 </html>
