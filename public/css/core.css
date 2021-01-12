@@ -11,10 +11,6 @@ This file contain the core styelsheet
 
 /* General */
 
-* {
-    cursor: url('../icons/circle-fill.svg'), auto;
-}
-
 body {
     font-family: 'Poppins';
     margin: 0;
@@ -59,6 +55,10 @@ body {
     background-color: green;
 }
 
+.wider {
+    height: 300px;
+}
+
 
 /* Animations */
 
@@ -89,6 +89,15 @@ body {
     }
 }
 
+@keyframes ltrlogo {
+    from {
+        margin-left: -300px;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
 
 /*----------------------------------------
     1) Light Mode Css
@@ -100,6 +109,7 @@ body {
 .lm-body #main-sec {
     background-color: var(--light);
     height: 100vh;
+    cursor: url('../icons/circle-fill.svg'), auto;
 }
 
 
@@ -296,20 +306,32 @@ body {
 
 .lm-body #content img {
     z-index: -99;
+    cursor: none;
 }
 
 .lm-body #content .img-con .cursor-img {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    background-color: white;
     border-radius: 50%;
     font-size: 20px;
     font-family: "Poppins";
     font-weight: 600;
     padding: 25px 10px;
-    color: var(--dark);
-    opacity: 0;
+    color: var(--light);
+    display: none;
+}
+
+.lm-body #content .img-con .cursor-img img {
+    width: 130px;
+    border-radius: 50%;
+    cursor: none;
+    -webkit-box-shadow: 0px 0px 75px -2px rgba(179, 179, 179, 1);
+    -moz-box-shadow: 0px 0px 75px -2px rgba(179, 179, 179, 1);
+    box-shadow: 0px 0px 75px -2px rgba(179, 179, 179, 1);
+}
+
+.lm-body #content .img-con img:hover~.cursor-img {
+    display: inherit;
+    cursor: none;
 }
 
 .lm-body #content a.exp-btn {
@@ -367,6 +389,12 @@ body {
     animation-duration: 0.7s;
 }
 
+.lm-body #nc-mob img {
+    margin-right: -25px;
+    animation-name: ltrlogo;
+    animation-duration: 1s;
+}
+
 
 /*resposive design*/
 
@@ -378,12 +406,87 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
     .lm-body #main-sec #navbar {
         display: none;
     }
     .lm-body #navbar-mobile {
         display: inherit;
+    }
+    .lm-body #content .headline h1 {
+        margin-bottom: -25px;
+        z-index: 99;
+        color: white;
+        font-size: 40px;
+        font-family: 'Poppins';
+        font-weight: normal;
+        text-shadow: 0px 0px 15px #2e2e2e61;
+    }
+    .lm-body #content img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .lm-body #content .headline h1 {
+        margin-bottom: -25px;
+        z-index: 99;
+        color: white;
+        font-size: 35px;
+        font-family: 'Poppins';
+        font-weight: normal;
+        text-shadow: 0px 0px 15px #2e2e2e61;
+    }
+    .lm-body #content img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .lm-body #content .headline h1 {
+        margin-bottom: -25px;
+        z-index: 99;
+        color: white;
+        font-size: 30px;
+        font-family: 'Poppins';
+        font-weight: normal;
+        text-shadow: 0px 0px 15px #2e2e2e61;
+    }
+    .lm-body #content img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .lm-body #content .headline h1 {
+        margin-bottom: -25px;
+        z-index: 99;
+        color: white;
+        font-size: 30px;
+        font-family: 'Poppins';
+        font-weight: normal;
+        text-shadow: 0px 0px 15px #2e2e2e61;
+    }
+    .lm-body #content img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .lm-body #content .headline h1 {
+        margin-bottom: -25px;
+        z-index: 99;
+        color: white;
+        font-size: 25px;
+        font-family: 'Poppins';
+        font-weight: normal;
+        text-shadow: 0px 0px 15px #2e2e2e61;
+    }
+    .lm-body #content img {
+        width: 200px;
+    }
+    #navbar-mobile img {
+        width: 40px
     }
 }
 

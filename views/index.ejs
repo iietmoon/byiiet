@@ -17,104 +17,108 @@
 </head>
 
 <body id="app" class="lm-body">
-    <section id="main-sec">
-        <div id="navbar">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm ps-3">
-                        <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
-                    </div>
-                    <div class="col-5 d-flex justify-content-center align-items-center">
-                        <div>
-                            <ul id="nav">
-                                <a v-bind:href="navLinks.l1">
-                                    <li v-text="nav.n1" v-bind:class="navClass.c1"></li>
-                                </a>
-                                <a v-bind:href="navLinks.l2">
-                                    <li v-text="nav.n2" v-bind:class="navClass.c2"></li>
-                                </a>
-                                <a v-bind:href="navLinks.l3">
-                                    <li v-text="nav.n3" v-bind:class="navClass.c3"></li>
-                                </a>
-                                <a v-bind:href="navLinks.l4">
-                                    <li v-text="nav.n4" v-bind:class="navClass.c4"></li>
-                                </a>
-                            </ul>
+    <main>
+        <section id="main-sec">
+            <div id="navbar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm ps-3">
+                            <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
                         </div>
-                    </div>
-                    <div class="col-sm d-flex justify-content-end align-items-center">
-                        <div class="row">
-                            <ul>
-                                <li>
-                                    <a v-bind:href="searchIcon.href" v-html="searchIcon.path" v-bind:class="searchIcon.c"></a>
-                                </li>
-                                <li>
-                                    <a v-bind:href="contactBtn.href" v-text="contactBtn.text" v-bind:class="contactBtn.c"></a>
-                                </li>
-                                <li>
-                                    <span class="mode-btn">
-                                      <a v-html="modeBtn.dark.path" v-bind:href="modeBtn.dark.href" v-bind:alt="modeBtn.dark.alt" v-bind:class="modeBtn.dark.class" v-on:click="dark();"></a>
-                                      <a v-html="modeBtn.light.path" v-bind:href="modeBtn.light.href" v-bind:alt="modeBtn.light.alt" v-bind:class="modeBtn.light.class"></a>
-                                    </span>
-                                </li>
-                            </ul>
+                        <div class="col-5 d-flex justify-content-center align-items-center">
+                            <div>
+                                <ul id="nav">
+                                    <a v-bind:href="navLinks.l1">
+                                        <li v-text="nav.n1" v-bind:class="navClass.c1"></li>
+                                    </a>
+                                    <a v-bind:href="navLinks.l2">
+                                        <li v-text="nav.n2" v-bind:class="navClass.c2"></li>
+                                    </a>
+                                    <a v-bind:href="navLinks.l3">
+                                        <li v-text="nav.n3" v-bind:class="navClass.c3"></li>
+                                    </a>
+                                    <a v-bind:href="navLinks.l4">
+                                        <li v-text="nav.n4" v-bind:class="navClass.c4"></li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm d-flex justify-content-end align-items-center">
+                            <div class="row">
+                                <ul>
+                                    <li>
+                                        <a v-bind:href="searchIcon.href" v-html="searchIcon.path" v-bind:class="searchIcon.c"></a>
+                                    </li>
+                                    <li>
+                                        <a v-bind:href="contactBtn.href" v-text="contactBtn.text" v-bind:class="contactBtn.c"></a>
+                                    </li>
+                                    <li>
+                                        <span class="mode-btn">
+                                          <a v-html="modeBtn.dark.path" v-bind:href="modeBtn.dark.href" v-bind:alt="modeBtn.dark.alt" v-bind:class="modeBtn.dark.class" v-on:click="dark();"></a>
+                                          <a v-html="modeBtn.light.path" v-bind:href="modeBtn.light.href" v-bind:alt="modeBtn.light.alt" v-bind:class="modeBtn.light.class"></a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="navbar-mobile" class="p-4">
-            <div class="d-flex">
-                <div class="col">
-                    <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
-                </div>
-                <div class="col">
-                    <div class="float-end mt-3 m-ico-c" dir="rtl">
-                        <a href="#" v-on:click="menushow();">
-                            <div class="m-ico m-ico-1"></div>
-                            <div class="m-ico m-ico-2"></div>
-                            <div class="m-ico m-ico-3"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div id="nc-mob" class="navbar-mobile-menu hide">
-                <div class="d-flex p-4">
+            <div id="navbar-mobile" class="p-4">
+                <div class="d-flex">
                     <div class="col">
                         <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
                     </div>
                     <div class="col">
-                        <div class="float-end mt-4 m-ico-c" dir="rtl">
-                            <a href="#" v-on:click="menuhide();">
-                                <div class="m-ico-close m-ico-close-1"></div>
-                                <div class="m-ico-close m-ico-close-2"></div>
+                        <div class="float-end mt-2 m-ico-c" dir="rtl">
+                            <a href="#" v-on:click="menushow();">
+                                <div class="m-ico m-ico-1"></div>
+                                <div class="m-ico m-ico-2"></div>
+                                <div class="m-ico m-ico-3"></div>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="content" class="d-flex justify-content-center">
-            <div class="text-center">
-                <div v-html="headline.text" v-bind:class='headline.c'></div>
-                <div class="img-con">
-                    <div class="cursor-img">
-                        Hello!
+                <div id="nc-mob" class="navbar-mobile-menu hide">
+                    <div class="d-flex p-4">
+                        <div class="col">
+                            <div class="float-end ">
+                                <img v-bind:src="logo.path" v-bind:alt="logo.alt" v-bind:width="logo.size">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="float-end mt-3 m-ico-c" dir="rtl">
+                                <a href="#" v-on:click="menuhide();">
+                                    <div class="m-ico-close m-ico-close-1"></div>
+                                    <div class="m-ico-close m-ico-close-2"></div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <img v-bind:src="img.path" v-bind:width="img.size" v-bind:alt="img.alt">
                 </div>
-                <br>
-                <a v-bind:href="btn.href" v-bind:class="btn.c" v-html="btn.html"></a>
             </div>
-        </div>
-
-    </section>
+            <div id="content" class="d-flex justify-content-center">
+                <div class="text-center">
+                    <div v-html="headline.text" v-bind:class='headline.c'></div>
+                    <div class="img-con">
+                        <img v-bind:src="img.path" v-bind:width="img.size" v-bind:alt="img.alt">
+                        <div class="cursor-img">
+                            <img src="img/hello.gif" alt="">
+                        </div>
+                    </div>
+                    <br>
+                    <a v-bind:href="btn.href" v-bind:class="btn.c" v-html="btn.html"></a>
+                </div>
+            </div>
+        </section>
+        <section class="wider"></section>
+    </main>
     <!--Vue.js-->
     <script src="js/core.vue.js"></script>
     <script>
-        const cursor = document.querySelector('.cursor');
+        const cursor = document.querySelector('.cursor-img');
         document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: " + (e.pageY - 15) + "px; left:" + (e.pageX - 15) + "px;");
+            cursor.setAttribute("style", "top: " + (e.pageY) + "px; left:" + (e.pageX) + "px;");
         });
     </script>
 </body>
