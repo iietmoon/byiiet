@@ -165,17 +165,17 @@ var aboutme = new Vue({
         },
         icon: {
             left: {
-                path: '<img src="icons/arrow-left.svg" width="50">'
+                path: '<img src="icons/arrow-left.svg" width="50" class="float-start">'
             },
             right: {
                 text: 'More',
-                path: '<img src="icons/arrow-right.svg" width="50">'
+                path: '<img src="icons/arrow-right.svg" width="50" class="float-end">'
             }
         },
         lang: {
             html: {
                 path: 'img/lang/html.png',
-                size: 100,
+                size: 135,
                 alt: 'html'
             },
             css: {

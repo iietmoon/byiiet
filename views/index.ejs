@@ -155,11 +155,22 @@
                 <h1>{{headline.txt}}</h1>
             </div>
             <div v-bind:class="overview.c" v-html="overview.txt"></div>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col"></div>
-                    <div class="col-8"></div>
-                    <div class="col"></div>
+                    <div class="col" v-html="icon.left.path"></div>
+                    <div class="col-8">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item"><img v-bind:src="lang.html.path" v-bind:alt="lang.html.alt" v-bind:width="lang.html.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.css.path" v-bind:alt="lang.css.alt" v-bind:width="lang.css.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.bootstrap.path" v-bind:alt="lang.bootstrap.alt" v-bind:width="lang.bootstrap.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.js.path" v-bind:alt="lang.js.alt" v-bind:width="lang.js.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.jquery.path" v-bind:alt="lang.jquery.alt" v-bind:width="lang.jquery.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.scss.path" v-bind:alt="lang.scss.alt" v-bind:width="lang.scss.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.bulma.path" v-bind:alt="lang.bulma.alt" v-bind:width="lang.bulma.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.materialize.path" v-bind:alt="lang.materialize.alt" v-bind:width="lang.materialize.size"></li>
+                        </ul>
+                    </div>
+                    <div class="col text-right" v-html="icon.right.path"></div>
                 </div>
             </div>
         </section>
