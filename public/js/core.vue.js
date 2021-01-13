@@ -162,6 +162,97 @@ var aboutme = new Vue({
         overview: {
             txt: '<p>I am Othmane N. a Full-stack & Mobile developer,<br>During this time I have worked on all layers of codes from the database to UI.<br>I have also been involved in all stages of a product life cycle from<br>conceptualization and design and up to deployment in production and support.</p>',
             c: 'overview'
+        },
+        icon: {
+            left: {
+                path: '<img src="icons/arrow-left.svg" width="50">'
+            },
+            right: {
+                text: 'More',
+                path: '<img src="icons/arrow-right.svg" width="50">'
+            }
+        },
+        lang: {
+            html: {
+                path: 'img/lang/html.png',
+                size: 100,
+                alt: 'html'
+            },
+            css: {
+                path: 'img/lang/css.png',
+                size: 100,
+                alt: 'css'
+            },
+            bootstrap: {
+                path: 'img/lang/bootstrap.png',
+                size: 100,
+                alt: 'bootstrap'
+            },
+            js: {
+                path: 'img/lang/js.png',
+                size: 100,
+                alt: 'javascript'
+            },
+            jquery: {
+                path: 'img/lang/jquery.png',
+                size: 100,
+                alt: 'jquery'
+            },
+            scss: {
+                path: 'img/lang/sass.png',
+                size: 100,
+                alt: 'sass'
+            },
+            bulma: {
+                path: 'img/lang/bulma.png',
+                size: 100,
+                alt: 'bulma'
+            },
+            materialize: {
+                path: 'img/lang/materialize.png',
+                size: 100,
+                alt: 'materialize'
+            },
+            react: {
+                path: 'img/lang/React.png',
+                size: 100,
+                alt: 'React'
+            },
+            vue: {
+                path: 'img/lang/vue.png',
+                size: 100,
+                alt: 'Vue'
+            },
+            node: {
+                path: 'img/lang/Node.png',
+                size: 100,
+                alt: 'Node.js'
+            },
+            php: {
+                path: 'img/lang/php.png',
+                size: 100,
+                alt: 'php'
+            },
+            sql: {
+                path: 'img/lang/mysql.png',
+                size: 100,
+                alt: 'sql'
+            },
+            graphql: {
+                path: 'img/lang/graphql.png',
+                size: 100,
+                alt: 'graphql'
+            },
+            mysql: {
+                path: 'img/lang/MySQL-Logo.png',
+                size: 100,
+                alt: 'MySql'
+            },
+            mongodb: {
+                path: 'img/lang/mongo.png',
+                size: 100,
+                alt: 'Mongodb'
+            },
         }
     }
 })

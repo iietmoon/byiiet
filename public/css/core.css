@@ -445,6 +445,14 @@ body {
     margin-top: -60px;
 }
 
+.lm-body #abm-sec {
+    cursor: url('../icons/circle-fill.svg'), auto;
+}
+
+.lm-body #abm-sec .overview {
+    margin-top: 45px;
+}
+
 .lm-body #abm-sec .overview {
     margin-top: 45px;
 }
