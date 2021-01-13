@@ -7,6 +7,7 @@ app.use('/css', express.static(__dirname + 'public/css'));
 app.use('/css', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 app.use('/icons', express.static(__dirname + 'public/icons'));
+app.use('/libraries', express.static(__dirname + 'public/libraries'));
 //set views
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -17,5 +18,5 @@ app.get('', (req, res) => {
 });
 
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 app.listen(port, () => console.log('server are running at 3000'));

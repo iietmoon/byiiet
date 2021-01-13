@@ -70,9 +70,55 @@ var mobnav = new Vue({
             href: '/',
             size: 65
         },
-        menu: {
-            icon: ''
+        nav: {
+            n1: {
+                txt: 'About me',
+                href: '#about'
+            },
+            n2: {
+                txt: 'Projects',
+                href: '#projects'
+            },
+            n3: {
+                txt: 'Services',
+                href: '#services'
+            },
+            n4: {
+                txt: 'Latest Articles',
+                href: '#articles'
+            }
         },
+        sm: {
+            instagram: {
+                icon: '<i class="fa fa-instagram" aria-hidden="true"></i>',
+                href: ''
+            },
+            github: {
+                icon: '<i class="fa fa-github-square" aria-hidden="true"></i>',
+                href: '',
+                repo: 'https://github.com/iietmoon/byiiet',
+            },
+            linkedin: {
+                icon: '<i class="fa fa-linkedin-square" aria-hidden="true"></i>',
+                href: ''
+            },
+            behance: {
+                icon: '<i class="fa fa-behance-square" aria-hidden="true"></i>',
+                href: ''
+            },
+            vue: {
+                icon: '<img src="img/lang/vue.png" width="20">',
+                href: ''
+            },
+            bootstrap: {
+                icon: '<img src="img/lang/bootstrap.png" width="20">',
+                href: ''
+            },
+            wp: {
+                icon: '<img src="img/lang/WordPress.png" width="20">',
+                href: ''
+            },
+        }
     },
     methods: {
         menushow: function() {
@@ -104,4 +150,18 @@ var content = new Vue({
             c: 'exp-btn'
         }
     },
+})
+var aboutme = new Vue({
+    el: '#abm-sec',
+    data: {
+        headline: {
+            mutedtxt: "ABOUT ME",
+            txt: "Hello!",
+            c: 'headline'
+        },
+        overview: {
+            txt: '<p>I am Othmane N. a Full-stack & Mobile developer,<br>During this time I have worked on all layers of codes from the database to UI.<br>I have also been involved in all stages of a product life cycle from<br>conceptualization and design and up to deployment in production and support.</p>',
+            c: 'overview'
+        }
+    }
 })

@@ -98,6 +98,13 @@ body {
     }
 }
 
+@keyframes navcon {
+    from {
+        margin-top: -35px;
+    }
+    to {}
+}
+
 
 /*----------------------------------------
     1) Light Mode Css
@@ -389,10 +396,64 @@ body {
     animation-duration: 0.7s;
 }
 
-.lm-body #nc-mob img {
-    margin-right: -25px;
-    animation-name: ltrlogo;
-    animation-duration: 1s;
+.lm-body #nc-mob a {
+    text-decoration: none;
+    color: white;
+    margin: 25px;
+    animation-name: navcon;
+    animation-duration: 0.9s;
+}
+
+.lm-body #nc-mob ul li a {
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+.lm-body #nc-mob .source-code h1 {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-family: 'Poppins';
+    animation-name: navcon;
+    animation-duration: 0.9s;
+}
+
+.lm-body #nc-mob .source-code a {
+    color: var(--light);
+    margin: 0;
+}
+
+.lm-body #abm-sec {
+    background-color: var(--dark);
+    padding: 100px 0;
+}
+
+.lm-body #abm-sec .headline {
+    text-align: center;
+}
+
+.lm-body #abm-sec .headline p {
+    color: rgba(255, 255, 255, 0.10);
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.lm-body #abm-sec .headline h1 {
+    color: white;
+    font-size: 45px;
+    margin-top: -60px;
+}
+
+.lm-body #abm-sec .overview {
+    margin-top: 45px;
+}
+
+.lm-body #abm-sec .overview p {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 
