@@ -74,6 +74,15 @@ $muted: #E8E8E8;
     to {}
 }
 
+@keyframes slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 /*----------------------------------------
     1) Light Mode Css
@@ -414,6 +423,45 @@ $muted: #E8E8E8;
                 color: white;
                 font-size: 25px;
                 font-weight: 400;
+            }
+        }
+        .lang {
+            ul {
+                li {
+                    img {
+                        margin: 10px;
+                        opacity: 0.2;
+                        &:hover {
+                            opacity: 1;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                span {
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 600;
+                    img {
+                        margin-left: 10px;
+                        transition: 0.4s;
+                    }
+                    &:hover {
+                        img {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+            #lang-2 {
+                animation-name: slide;
+                animation-duration: 1.5s;
+            }
+            .slide {
+                animation-name: slide;
+                animation-duration: 1.5s;
             }
         }
     }

@@ -155,11 +155,13 @@
                 <h1>{{headline.txt}}</h1>
             </div>
             <div v-bind:class="overview.c" v-html="overview.txt"></div>
-            <div class="container-fluid">
+            <div class="container-fluid lang">
                 <div class="row">
-                    <div class="col" v-html="icon.left.path"></div>
-                    <div class="col-8">
-                        <ul class="list-inline text-center">
+                    <div class="col d-flex justify-content-end align-items-center">
+                        <a href="#back" v-html="icon.left.path" v-on:click="back()"></a>
+                    </div>
+                    <div class="col-10">
+                        <ul id="lang-1" class="list-inline text-center">
                             <li class="list-inline-item"><img v-bind:src="lang.html.path" v-bind:alt="lang.html.alt" v-bind:width="lang.html.size"></li>
                             <li class="list-inline-item"><img v-bind:src="lang.css.path" v-bind:alt="lang.css.alt" v-bind:width="lang.css.size"></li>
                             <li class="list-inline-item"><img v-bind:src="lang.bootstrap.path" v-bind:alt="lang.bootstrap.alt" v-bind:width="lang.bootstrap.size"></li>
@@ -169,8 +171,20 @@
                             <li class="list-inline-item"><img v-bind:src="lang.bulma.path" v-bind:alt="lang.bulma.alt" v-bind:width="lang.bulma.size"></li>
                             <li class="list-inline-item"><img v-bind:src="lang.materialize.path" v-bind:alt="lang.materialize.alt" v-bind:width="lang.materialize.size"></li>
                         </ul>
+                        <ul id="lang-2" class="list-inline text-center hide">
+                            <li class="list-inline-item"><img v-bind:src="lang.react.path" v-bind:alt="lang.react.alt" v-bind:width="lang.react.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.vue.path" v-bind:alt="lang.vue.alt" v-bind:width="lang.vue.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.node.path" v-bind:alt="lang.node.alt" v-bind:width="lang.node.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.php.path" v-bind:alt="lang.php.alt" v-bind:width="lang.php.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.sql.path" v-bind:alt="lang.sql.alt" v-bind:width="lang.sql.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.graphql.path" v-bind:alt="lang.graphql.alt" v-bind:width="lang.graphql.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.mysql.path" v-bind:alt="lang.mysql.alt" v-bind:width="lang.mysql.size"></li>
+                            <li class="list-inline-item"><img v-bind:src="lang.mongodb.path" v-bind:alt="lang.mongodb.alt" v-bind:width="lang.mongodb.size"></li>
+                        </ul>
                     </div>
-                    <div class="col text-right" v-html="icon.right.path"></div>
+                    <div class="col d-flex justify-content-start align-items-center">
+                        <a href="#next" v-html="icon.right.path" v-on:click="next()"></a>
+                    </div>
                 </div>
             </div>
         </section>

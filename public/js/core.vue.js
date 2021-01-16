@@ -165,17 +165,17 @@ var aboutme = new Vue({
         },
         icon: {
             left: {
-                path: '<img src="icons/arrow-left.svg" width="50" class="float-start">'
+                path: '<img src="icons/arrow-left.svg" width="25" class="float-start">'
             },
             right: {
                 text: 'More',
-                path: '<img src="icons/arrow-right.svg" width="50" class="float-end">'
+                path: '<span>More   <img src="icons/arrow-right.svg" width="25" class="float-end"></span>'
             }
         },
         lang: {
             html: {
                 path: 'img/lang/html.png',
-                size: 135,
+                size: 100,
                 alt: 'html'
             },
             css: {
@@ -253,6 +253,21 @@ var aboutme = new Vue({
                 size: 100,
                 alt: 'Mongodb'
             },
+        }
+    },
+    methods: {
+        next: function() {
+            var langfirst = document.getElementById('lang-1');
+            var langsecond = document.getElementById('lang-2');
+            langfirst.classList.add('hide');
+            langsecond.classList.remove('hide');
+        },
+        back: function() {
+            var langfirst = document.getElementById('lang-1');
+            var langsecond = document.getElementById('lang-2');
+            langsecond.classList.add('hide');
+            langfirst.classList.add('slide');
+            langfirst.classList.remove('hide')
         }
     }
 })

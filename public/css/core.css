@@ -114,6 +114,24 @@ body {
   }
 }
 
+@-webkit-keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*----------------------------------------
     1) Light Mode Css
 ----------------------------------------*/
@@ -485,6 +503,51 @@ body {
   color: white;
   font-size: 25px;
   font-weight: 400;
+}
+
+.lm-body #abm-sec .lang ul li img {
+  margin: 10px;
+  opacity: 0.2;
+}
+
+.lm-body #abm-sec .lang ul li img:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.lm-body #abm-sec .lang a {
+  text-decoration: none;
+}
+
+.lm-body #abm-sec .lang a span {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lm-body #abm-sec .lang a span img {
+  margin-left: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.lm-body #abm-sec .lang a span:hover img {
+  margin-left: 20px;
+}
+
+.lm-body #abm-sec .lang #lang-2 {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.lm-body #abm-sec .lang .slide {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 @media screen and (max-width: 1300px) {
