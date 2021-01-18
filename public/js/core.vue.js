@@ -175,99 +175,103 @@ var aboutme = new Vue({
         lang: {
             html: {
                 path: 'img/lang/html.png',
-                size: 100,
+                size: 70,
                 alt: 'html'
             },
             css: {
                 path: 'img/lang/css.png',
-                size: 100,
+                size: 70,
                 alt: 'css'
             },
             bootstrap: {
                 path: 'img/lang/bootstrap.png',
-                size: 100,
+                size: 70,
                 alt: 'bootstrap'
             },
             js: {
                 path: 'img/lang/js.png',
-                size: 100,
+                size: 70,
                 alt: 'javascript'
             },
             jquery: {
                 path: 'img/lang/jquery.png',
-                size: 100,
+                size: 70,
                 alt: 'jquery'
             },
             scss: {
                 path: 'img/lang/sass.png',
-                size: 100,
+                size: 70,
                 alt: 'sass'
             },
             bulma: {
                 path: 'img/lang/bulma.png',
-                size: 100,
+                size: 70,
                 alt: 'bulma'
             },
             materialize: {
                 path: 'img/lang/materialize.png',
-                size: 100,
+                size: 70,
                 alt: 'materialize'
             },
             react: {
                 path: 'img/lang/React.png',
-                size: 100,
+                size: 70,
                 alt: 'React'
             },
             vue: {
                 path: 'img/lang/vue.png',
-                size: 100,
+                size: 70,
                 alt: 'Vue'
             },
             node: {
                 path: 'img/lang/Node.png',
-                size: 100,
+                size: 70,
                 alt: 'Node.js'
             },
             php: {
                 path: 'img/lang/php.png',
-                size: 100,
+                size: 70,
                 alt: 'php'
             },
             sql: {
                 path: 'img/lang/mysql.png',
-                size: 100,
+                size: 70,
                 alt: 'sql'
             },
             graphql: {
                 path: 'img/lang/graphql.png',
-                size: 100,
+                size: 70,
                 alt: 'graphql'
             },
             mysql: {
                 path: 'img/lang/MySQL-Logo.png',
-                size: 100,
+                size: 70,
                 alt: 'MySql'
             },
             mongodb: {
                 path: 'img/lang/mongo.png',
-                size: 100,
+                size: 70,
                 alt: 'Mongodb'
             },
         }
     },
     methods: {
         next: function() {
-            var langfirst = document.getElementById('lang-1');
-            var langsecond = document.getElementById('lang-2');
+            const langfirst = document.getElementById('lang-1');
+            const langsecond = document.getElementById('lang-2');
+            const backbtn = document.getElementById('back-btn');
             langfirst.classList.add('hide');
             langsecond.classList.remove('hide');
+            backbtn.classList.remove('hide')
         },
         back: function() {
-            var langfirst = document.getElementById('lang-1');
-            var langsecond = document.getElementById('lang-2');
+            const langfirst = document.getElementById('lang-1');
+            const langsecond = document.getElementById('lang-2');
+            const backbtn = document.getElementById('back-btn');
             langsecond.classList.add('hide');
             langfirst.classList.add('slide');
             langfirst.classList.remove('hide')
+            backbtn.classList.add('hide')
         }
     }
 })

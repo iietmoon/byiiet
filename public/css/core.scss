@@ -33,7 +33,7 @@ $muted: #E8E8E8;
 
 @keyframes opacity {
     from {
-        opacity: 0;
+        opacity: 0.8;
     }
     to {
         opacity: 1;
@@ -89,6 +89,39 @@ $muted: #E8E8E8;
 ----------------------------------------*/
 
 .lm-body {
+    #loader {
+        background-color: $light;
+        .loader-content {
+            width: 100vw;
+            height: 100vh;
+            ul {
+                margin: 0;
+                padding: 0 0 10px 0;
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    background-color: white;
+                    border-radius: 50%;
+                    opacity: 0.2;
+                }
+                ._l {
+                    opacity: 1;
+                }
+            }
+            p {
+                color: white;
+                font-size: 17px;
+            }
+        }
+        transition: 0.8s
+    }
+    #main {
+        transition: 0.8s;
+        animation-name: opacity;
+        animation-duration: 1s;
+    }
     #main-sec {
         background-color: $light;
         height: 100vh;
